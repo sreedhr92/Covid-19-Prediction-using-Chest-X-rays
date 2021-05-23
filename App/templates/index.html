@@ -1,0 +1,25 @@
+<html>
+<head>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <title>Covid Detection App</title>
+  </style>
+</head>
+<body>
+  <div class="main">
+    <p class="head">Covid-19 Prediction using X-rays</p>
+    <form enctype="multipart/form-data" action="{{url_for('predict')}}"id="form1" method="POST">
+     <p class="head_2">Upload the front view of your Chest's CT/X-Ray Scan</p>
+     <br>
+     <input type="file" name="file" id="file" accept="image/*"/>
+      <br><br><br>
+      <a class="submit" onclick="predict();" >Predict</a>  
+      <p class="head_2">{{output}}</p>
+    </form> 
+    </div>
+    <script>
+        function predict(){
+            document.getElementById("form1").submit();
+        }
+    </script>
+</body>
+</html>

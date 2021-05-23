@@ -1,0 +1,101 @@
+
+    @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Poppins:400,500');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color:rgba(238, 125, 125, 0);
+    -webkit-text-size-adjust:none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #f7b094;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: auto;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: center;
+    overflow: auto;
+    }
+
+.main {
+    background-color:#fff;
+	  width: 580px;
+	  height: 570px;
+	  margin: 2em auto;
+	  border-radius: 30px;
+	  padding: 1em;
+	  position: relative;
+	  overflow: hidden;
+	  box-shadow: 0 6px 31px -2px rgba(0, 0, 0, .3);
+}
+
+.head {
+    padding-top: 40px;
+    color: #8C55AA;
+    font-weight: bold;
+    text-align: center;
+    font-size: 23px;
+}
+
+.head_2 {
+    padding-top: 40px;
+    color: #3b6b1b;
+    text-align: center;
+    padding-bottom: 40px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+form {
+    padding-top: 40px;
+}
+input[type=file]::file-selector-button{
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    border: 0;
+    background: linear-gradient(to right, #2779b0, #40b6fb);
+    text-align: center;
+    width: 180px;
+    height: 60px;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+input[type=file]::file-selector-button:active{
+    border: none;
+    
+}
+input{
+    padding-left: 166px;
+}
+
+.submit {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #b0276c, #7e10b1);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+a{
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    text-decoration: none;
+    cursor: pointer;
+}
