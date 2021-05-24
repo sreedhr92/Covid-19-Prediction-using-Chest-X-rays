@@ -1,6 +1,4 @@
-
-![output](https://user-images.githubusercontent.com/53933590/119329940-55cb2580-bca3-11eb-944c-aba3c40a3622.gif)
-
+![VID_20210524151631](https://user-images.githubusercontent.com/53933590/119330772-3b457c00-bca4-11eb-8c46-3647e7c98eae.gif)
 
 
 ### Installing Python packages😀
