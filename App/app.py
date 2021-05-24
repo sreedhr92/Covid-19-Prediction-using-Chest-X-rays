@@ -1,12 +1,14 @@
 # importing the required libraries
-import numpy as np
-from flask import Flask, render_template, request
-from os.path import join, dirname, realpath
-from tensorflow import keras
-from keras.preprocessing.image import load_img,img_to_array
-from werkzeug.utils import secure_filename
 import os
+from os.path import dirname, join, realpath
 
+import numpy as np
+from flask import Flask, redirect, render_template, request, url_for
+from keras.preprocessing.image import img_to_array, load_img
+from tensorflow import keras
+from werkzeug.utils import secure_filename
+
+import grad
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -15,6 +17,7 @@ app.static_folder = 'static'
 f = ""
 original_filename =""
 UPLOADS_PATH = join(dirname(realpath(__file__)), 'static\\')
+PHOTO_PATH = join(UPLOADS_PATH,'cam.jpg')
 
 def get_array(img_path):
   img = load_img(img_path,target_size=(224,224))
@@ -39,6 +42,11 @@ def predict():
     result_1 = model.predict_classes(test_1)
     output = {1:"Covid patient😭😱",0:"Normal patient😎😋"}
     res = output[result_1[0][0]]
+    if output==1:
+        grad_cam_save(path)
+        os.remove(path)
+        return render_template('index.html', output='Result :{}'.format(res),photo={PHOTO_PATH})
+    os.remove(path)
     return render_template('index.html', output='Result :{}'.format(res))
 
 if __name__ == "__main__":

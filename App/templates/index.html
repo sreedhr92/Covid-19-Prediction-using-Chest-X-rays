@@ -14,8 +14,11 @@
       <br><br><br>
       <a class="submit" onclick="predict();" >Predict</a>  
       <p class="head_2">{{output}}</p>
-    </form> 
-    </div>
+    </form>
+  </div> 
+  <div class="photo"hidden>
+    <img src="{{ user_image }}">
+  </div>
     <script>
         function predict(){
             document.getElementById("form1").submit();
