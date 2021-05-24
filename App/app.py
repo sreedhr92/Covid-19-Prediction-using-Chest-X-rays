@@ -8,7 +8,7 @@ from keras.preprocessing.image import img_to_array, load_img
 from tensorflow import keras
 from werkzeug.utils import secure_filename
 
-import grad
+from grad import *
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
